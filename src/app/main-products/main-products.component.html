@@ -1,0 +1,19 @@
+<h1 class="products-dis">
+    First list
+</h1>
+<carousel [itemsPerSlide]="itemsPerSlide"
+        [singleSlideOffset]="singleSlideOffset"
+        [interval]="0"
+        [noWrap]="noWrap"
+        [isAnimated]="true"
+
+        class="carousel-container"
+        >
+
+    <slide *ngFor="let slide of slides; let index=index">
+        <app-product [product]= "slide.image"></app-product>
+    </slide>
+
+</carousel>
+
+

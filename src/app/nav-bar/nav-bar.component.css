@@ -1,0 +1,22 @@
+.norm-button{
+    background-color: transparent;
+    border: transparent;
+}
+
+.nav-icon{
+    fill:rgb(211, 211, 211);
+    margin-left: .8rem;
+}
+
+.navbar{
+    padding: .5rem 8rem;
+}
+
+a{
+    color:rgb(211, 211, 211);
+}
+
+.dropdown-menu.show {
+    background-color: #121212;
+    border: 1px solid rgb(211, 211, 211);
+}

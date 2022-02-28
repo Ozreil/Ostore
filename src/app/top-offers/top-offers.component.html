@@ -1,0 +1,9 @@
+<div class="card top-offers-container text-white bg-dark mb-3">
+    <h1 class="top-offers-title">Top Offers</h1>
+    <carousel [isAnimated]="true">
+        <slide *ngFor="let img of imgs">
+            <img src={{img}} alt="first slide">
+        </slide>
+        
+    </carousel>
+</div>

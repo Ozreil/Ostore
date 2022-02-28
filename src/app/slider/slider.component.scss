@@ -1,0 +1,88 @@
+div{
+    background-color: aliceblue;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    flex-direction: column;
+
+}
+
+
+output {
+    // height: 50px;
+    // background: blue;
+    // border-radius: 35px;
+    // padding:15px;
+    // color: #fff;
+    // position: relative;
+    // bottom: 8px;
+
+    position: absolute;
+	top: -2.5em;
+	left: 50%;
+	width: 60px;
+	height: 1em;
+	text-align: center;
+	color: red;
+	font-weight: bold;
+	white-space: nowrap;
+	background-color:blue;
+	border-radius:30px;
+}
+
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-left: 150px;
+  width: 500px;
+  height: 7px;
+  background: red;
+  border-radius: 25px;
+  background-image: linear-gradient(blue, blue);
+  background-size: 40% 100%;
+  background-repeat: no-repeat;
+}
+
+
+
+@mixin track(){
+  -webkit-appearance: none;
+  box-shadow: none;
+  border-radius:25px ;
+  border: none;
+  background: transparent;
+}
+
+@mixin thumb(){
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: blue;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+}
+
+@mixin thumb-hover(){
+  background: blue;
+  border:white 2px solid;
+}
+
+
+
+input{
+  &::-webkit-slider-runnable-track { @include track }
+  &::-moz-range-track{@include track }
+  &::-ms-track{@include track}
+
+  &::-webkit-slider-thumb{@include thumb}
+  &::-moz-range-thumb{@include thumb}
+  &::-ms-thumb{@include thumb}
+
+  &::-webkit-slider-thumb:hover{@include thumb-hover}
+  &::-moz-range-thumb:hover{@include thumb-hover}
+  &::-ms-thumb:hover{@include thumb-hover}
+}

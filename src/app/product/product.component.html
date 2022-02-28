@@ -1,0 +1,22 @@
+<div (click)="openModal(template)" class="container" (mouseout)="showText=false" (mouseover)="showText=true" [class.carousel-show-detail] = " showText===what">    
+    <img class="product-img" src={{product}} >
+    <div class="detail-container">
+        <h1 style="color:ivory">Name</h1>
+        <p style="color:ivory">price</p>
+       
+        <ng-template #template  >
+            <div class="modal-header">
+                <img class="product-img" src={{product}} width="100%" >
+                
+            </div>
+            <div class="modal-body">
+                <h1 style="color:ivory">Name</h1>
+                <p style="color:ivory">price</p>
+                <p>buy</p>
+            </div>
+        </ng-template>
+    </div>
+
+</div>
+
+
